@@ -1,3 +1,11 @@
+//const express = require('express')
+import * as express from 'express'
+
+const app = express()
+
+app.get('/', (req, res) => res.send('Hello World!sssa'))
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
 function hello() {
   return new Promise((resolve, reject) => {
@@ -10,9 +18,9 @@ function hello() {
   });
 }
 
-// hello().then(x => {
-//   console.log(x);
-// }).catch(e => console.log(e));
+hello().then(x => {
+  console.log(x);
+}).catch(e => console.log(e));
 
 async function world() {
   try {
